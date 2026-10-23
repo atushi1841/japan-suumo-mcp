@@ -1,0 +1,64 @@
+{
+  "manifest_version": "0.4",
+  "name": "japan-suumo-mcp",
+  "display_name": "Suumo Japan Real Estate Price Stats API",
+  "version": "0.1.0",
+  "description": "RapidAPI wrapper for Suumo Japan Real Estate Price Stats API. FREEMIUM tier, no account required for metadata.",
+  "long_description": "# Suumo Japan Real Estate Price Stats API (MCP Server)\n\nMCP server wrapping the RapidAPI Suumo Japan Real Estate Price Stats API service.\n\n## Tools\n\n| Tool | Description |\n|------|-------------|\n| `get_api_info()` | Metadata, RapidAPI URL, pricing tier, integration notes |\n| `query_api(params)` | Call the RapidAPI endpoint (requires `RAPIDAPI_KEY` env) |\n\n## Data Source\n\n- **RapidAPI**: https://rapidapi.com/atsushi-noriduki/api/japan-suumo\n- **Apify Store**: https://apify.com/fruitful_quintessence (related actors for broader coverage)\n- **GitHub**: https://github.com/atushi1841/japan-suumo-mcp\n\n## Pricing\n\nThis API is **FREEMIUM** on RapidAPI — free tier available without credit card.\nGet your free key at the RapidAPI URL above.\n\n## Requirements\n\n- Python >= 3.10, fastmcp\n- Optional: `RAPIDAPI_KEY` env var for actual data calls (free)\n- Local stdio MCP transport\n\n## Installation (Smithery)\n\n```bash\nsmithery install @atushi1841/japan-suumo-mcp\n```\n",
+  "author": {
+    "name": "atushi1841",
+    "url": "https://github.com/atushi1841"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atushi1841/japan-suumo-mcp"
+  },
+  "homepage": "https://github.com/atushi1841/japan-suumo-mcp",
+  "server": {
+    "type": "python",
+    "entry_point": "server.py",
+    "mcp_config": {
+      "command": "python3",
+      "args": [
+        "${__dirname}/server.py"
+      ]
+    }
+  },
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "linux",
+      "win32"
+    ],
+    "runtimes": {
+      "python": ">=3.10"
+    }
+  },
+  "keywords": [
+    "japan",
+    "rapidapi",
+    "freemium",
+    "data",
+    "mcp",
+    "atsuhi1841"
+  ],
+  "tools": [
+    {
+      "name": "get_api_info",
+      "description": "Return metadata, RapidAPI URL, and usage notes for Suumo Japan Real Estate Price Stats API."
+    },
+    {
+      "name": "query_api",
+      "description": "Call the Suumo Japan Real Estate Price Stats API RapidAPI endpoint. Requires RAPIDAPI_KEY env var.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "params": {
+            "type": "object",
+            "description": "Optional query parameters for the API call."
+          }
+        }
+      }
+    }
+  ]
+}

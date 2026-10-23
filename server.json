@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.atushi1841/japan-suumo-mcp",
+  "description": "RapidAPI wrapper for Suumo Japan Real Estate Price Stats API. FREEMIUM tier, no account required for metadata.",
+  "version": "0.1.0",
+  "repository": {
+    "url": "https://github.com/atushi1841/japan-suumo-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "mcpb",
+      "identifier": "https://github.com/atushi1841/japan-suumo-mcp/releases/download/v0.1.0/server.mcpb",
+      "version": "0.1.0",
+      "fileSha256": "114a24b0a4ef4cdedc45f322ddae968f510deb6e27c5280bfd4dc9c1a95ee10e",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
